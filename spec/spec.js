@@ -6,14 +6,14 @@ var grades=[
     {grade:"D", range:[60, 69]},
     {grade:"F", range:[0,  59]}
   ];
-describe('#findTheMark() finds the corresponding the score ', function() {
-  it('given an array with objects find the corresponding grade', function() {
- expect(grader.findTheMark(grades, 75)).toEqual("C");
+describe('#findTheScore() finds the corresponding the score ', function() {
+  it('given an array with objects find the corresponding grade based on the score', function() {
+ expect(grader.findTheScore(grades, 75)).toEqual("C");
  })});
 
- describe('#findTheMark() finds the corresponding the score ', function() {
+ describe('#findTheScore() strech finds the corresponding the score ', function() {
    it('Add \'+\' and \'-\' grades.  So a 99 is actually a A+ and an 80 is a B-', function() {
-  expect(grader.findTheMark(grades, 99)).toEqual("A+");
+  expect(grader.findTheScore(grades, 99)).toEqual("A+");
   })});
 
 describe('#averageScore() finds the average score from a given array of scores', function() {
@@ -21,7 +21,7 @@ describe('#averageScore() finds the average score from a given array of scores',
  expect(grader.averageScore([90, 95, 87, 60])).toEqual(83);
  })});
 
-describe('#medianScore() takes an array of test scores and calculates the middle one', function() {
+describe('#medianScore() takes an array of test scores and calculates the median value', function() {
  it('returns the median score', function() {
 expect(grader.medianScore([90, 95, 90, 87, 60])).toEqual(90);
 })});
@@ -31,7 +31,7 @@ describe('#medianScore() takes an array of test scores and calculates the middle
 expect(grader.medianScore([90, 95, 90, 80, 87, 60])).toEqual(85);
 })});
 
-describe('#medianScore() takes an array of test scores and calculates theone that appers most often', function() {
+describe('#medianScore() takes an array of test scores and calculates the one that appers most often', function() {
  it('return the most frequent score', function() {
 expect(grader.modeScore([90, 95, 90, 80, 87, 60])).toEqual(90);
 })});

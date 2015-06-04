@@ -1,5 +1,5 @@
 module.exports={
-  findTheMark: function(grades, n){
+  findTheScore: function(grades, n){
    for(var i=0, init=""; i<grades.length; i++){
       if(n > grades[i].range[0] && n < (grades[i].range[1])-1){
         init=grades[i].grade;
