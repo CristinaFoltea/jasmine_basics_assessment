@@ -4,7 +4,13 @@
   "description": "**Instructions:** Fork and clone this repository.  Create a file called `grader.js` and write the following functions inside of it.  You must have full test coverage(write a bunch of jasmine tests for each function).  This is an open-book exercise.  Feel free to refer to your notes and the jasmine docs.",
   "main": "grader.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon --exec standard & nodemon --exec jasmine"
+  },
+  "standard": {
+    "ignore": [
+      "spec/**",
+      "node_modules/**"
+    ]
   },
   "repository": {
     "type": "git",
@@ -15,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/CristinaFoltea/jasmine_basics_assessment/issues"
   },
-  "homepage": "https://github.com/CristinaFoltea/jasmine_basics_assessment"
+  "homepage": "https://github.com/CristinaFoltea/jasmine_basics_assessment",
+  "dependencies": {
+    "lodash": "^3.9.3"
+  }
 }
