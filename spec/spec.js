@@ -13,7 +13,7 @@ describe('#findTheScore() finds the corresponding the score ', function() {
 
  describe('#findTheScore() strech finds the corresponding the score ', function() {
    it('Add \'+\' and \'-\' grades.  So a 99 is actually a A+ and an 80 is a B-', function() {
-  expect(grader.findTheScore(grades, 99)).toEqual('A+');
+  expect(grader.findTheScore(grades, 89)).toEqual('B+');
   })});
 
 describe('#averageScore() finds the average score from a given array of scores', function() {
@@ -33,5 +33,10 @@ expect(grader.medianScore([90, 95, 90, 80, 87, 60])).toEqual(85);
 
 describe('#modeScore() takes an array of test scores and calculates the one that appers most often', function() {
  it('return the most frequent score', function() {
-expect(grader.modeScore([90, 95, 90, 87, 80])).toEqual('90');
+expect(grader.modeScore([90, 95, 90, 87, 80])).toEqual(90);
+})});
+
+describe('#modeScore() takes an array of test scores and calculates the one that appers most often', function() {
+ it('return the most frequent score', function() {
+expect(grader.modeScore([90, 95, 90, 87, 80, 80])).toEqual(['90', '80']);
 })});
